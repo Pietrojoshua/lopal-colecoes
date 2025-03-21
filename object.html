@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Object></Object></title>
+</head>
+<body>
+    <script>
+
+let aluno = {
+    nome: 'Aline',
+    idade: 15,
+    sesi: 'ipiranga',
+    temPet: true
+}
+
+//Document.write(aluno);
+console.log(aluno);
+
+document.write ('Nome. ' + aluno.nome + '<br>');
+document.write ('idade ' + aluno.idade + '<br>');
+document.write ('idade ' + aluno.ipiranga + '<br>');
+document.write ('idade ' + aluno.temPet + '<br>');
+
+let alunos =[
+    {nome: 'Aline', idade:15, sesi: 'ipiranga', temPet: true},
+    {nome: 'Barbara', idade: 16, sesi: 'Vila Leopoldina', temPet: true}
+];
+
+
+for (let i = 0; i < alunos.length; i++) {
+    //document.write('<p>O(a) aluno(a) ' + alunos[i].nome + ' tem ' + alunos[i].idade + ' Anos e é do SESI' + alunos[i].sesi + '. </p>');
+
+    document.write(`<p>O(a) aluno(a)  ${alunos[i].nome} tem ${alunos[i].idade} anos e é do SESI ${alunos[i].sesi}. ${alunos[i].temPet ?
+    "tem pet." : "Nao tem pet."}</p>`)
+}   
+
+    
+</script>
+</body>
+</html>
