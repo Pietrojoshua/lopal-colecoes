@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+
+<body>
+    <button type="button" onclick="adcionarAluno()">Adcionar Aluno</button>
+    <button type="button" onclick="removerNome()">Remover nome</button>
+    <br>
+    <output></output>
+
+
+    <Script>
+
+let alunos = ["Aline", "Arthur", "Barbara", "Bruna L", "Bruna T ", "Bruna V", "Caua", "Daniel", "Davi" ];
+
+
+
+function imprimirAlunos() {
+
+    document.querySelector("output").innerHTML = "<h1>Lista de alunos</h1>"
+    
+    for (let indice = 0; indice < alunos.length; indice++){
+        document.querySelector("output").innerHTML += alunos[indice] +
+        "<br>";
+}
+
+
+}
+
+function adcionarAluno() {
+
+    let novoAluno = prompt ("Digite o nome do(a) aluno(a)")
+    alunos.push(novoAluno)
+
+    opcaoUsuario = confirm ("Deseja adcionar mais um aluno?")
+
+    while(opcaoUsuario) {
+        adcionarAluno()
+    }
+
+    imprimirAlunos()
+}
+
+imprimirAlunos()
+
+function removerNome(){
+
+    if (alunos.length > 0){
+        alunos.pop()
+        imprimirAlunos()
+    }else{alert("Acabou os nomes para remover")
+
+    }
+}
+
+
+    </Script>
+    
+</body>
+</html>
